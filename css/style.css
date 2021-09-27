@@ -1,0 +1,573 @@
+/* starting common things such as tittles and sub tittles*/
+.tittles {
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #1f1f1f;
+    position: relative;
+    z-index: 2;
+}
+.tittles::before {
+    content: 'c';
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 6rem;
+    font-weight: 900;
+    color: #e2e2e2;
+    top: 0;
+    line-height: 0;
+    left: calc(50% - 37px);
+    z-index: -1;
+}
+.tittles::after {
+    content: 'We are digital thinkers';
+    font-family: sans-serif;
+    color: #787878;
+    display: block;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 1.2rem;
+}
+.btn.btn-primary {
+    background-color: #00C3DA;
+    border-color: #00C3DA;
+}
+.btn.btn-primary:hover {
+    transform: translateY(-1px);
+    transition: all 0.1s;
+    position: relative;
+}
+.btn.btn-primary:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(0, 196, 218, 0.246) 60%,rgba(255, 255, 255, 0.315));
+    background-repeat: no-repeat;
+    animation: button-hover-animation .5s;
+}
+/* finish common things such as tittles and sub tittles*/
+/* starting navgation bar */
+.navbar {
+    box-shadow: rgb(230, 230, 230) 2px 0px 15px
+}
+.navbar-light {
+    background-color: #FFF
+}
+.navbar-light .navbar-brand {
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    text-transform: lowercase
+}
+.navbar-light .navbar-brand .blue-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #00C3DA;
+}
+.navbar-light .nav-item .nav-link {
+    color: #242424;
+    text-transform: capitalize;
+    font-size: 1rem
+}
+.navbar-light .nav-item .nav-link.active {
+    color: #787878
+}
+/* this is the line between the menu items and the social icons styling */
+.border-control {
+    width: 1px;
+    height: 58px;
+    background-color: #AAAAAA
+}
+.navbar-nav .nav-item .nav-link i:hover {
+    color: #787878
+}
+/* finish navgation bar */
+/* starting slid show */
+
+#slidshow .carousel-item {
+    position: relative;
+}
+#slidshow .carousel-item::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(31, 31, 31, 0.5);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+#slidshow .carousel-item .slidshow-content {
+    position: absolute; 
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+#slidshow .carousel-item .slidshow-content h3 {
+    font-family: sans-serif;
+    font-size: 6rem;
+    font-weight: 600;
+    color: #FFF;
+    text-transform: capitalize;
+    animation: slider-animation .5s
+}
+#slidshow .carousel-item .slidshow-content p{
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    color: #FFF;
+    text-transform: capitalize;
+    animation: slider-animation .5s
+}
+#slidshow .carousel-item .slidshow-content .btn {
+    font-family: sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 12px 25px ;
+    animation: slider-animation .5s
+}
+#slidshow .carousel-control-prev {
+    position: absolute;
+    top: 0%;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    text-align: left;
+    z-index: 11;
+    transform: translateY(500%)
+}
+#slidshow .carousel-control-next  {
+    position: absolute;
+    top: 0%;
+    text-align: left;
+    left:0;
+    z-index: 10;
+    transform: translateY(calc(500% + 3.125rem));
+    width: 40px;
+    height: 40px;
+}
+#slidshow .carousel-control-prev:hover i,
+#slidshow .carousel-control-next:hover i{
+    color: #787878;
+    border: none
+    
+}
+#slidshow .carousel-control-prev  i,
+#slidshow .carousel-control-next  i {
+    z-index: 3;
+}
+#slidshow .carousel-control-prev:hover i::after,
+#slidshow .carousel-control-next:hover i::after{
+    content: '';
+    background-color: #FFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    animation: slider-button-hover-animation .5s ;
+    z-index: -1;
+    transform: scale(1.2)
+}
+/* finish slid show */
+/* starting about section */
+
+#about span {
+    text-transform: uppercase
+}
+#about p {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    color: #787878;
+    font-weight: 300;
+}
+#about p span {
+    color: #00C3DA;
+    text-transform: lowercase
+}
+#about .btn.btn-outline-light {
+    color: #000;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    transition: all .5s
+}
+
+#about .btn.btn-outline-light:hover {
+    background-color: #000;
+    color: #FFF
+}
+/* finish about section */
+/* starting team section */
+.card-container {
+    position: relative;
+    overflow: hidden;
+}
+.image-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 195, 218, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #FFF;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all .3s;
+    overflow: hidden;
+}
+.image-caption .icons i {
+    cursor: pointer;
+    padding-left: 1rem
+}
+.card-container:hover .image-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+.image-caption h4 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600
+}
+.image-caption span {
+    font-size: .8rem;
+    text-transform: capitalize
+}
+/* finish team section */
+/* starting services section */
+#services {
+    background-color: #626262
+}
+.top-team-head-control p {
+    text-transform: uppercase;
+    color: #FFF;
+    font-weight: 700;
+    font-size: .8rem;
+    font-family: sans-serif
+}
+.bottom-team-head-control .tittles {
+    z-index: 2;
+    color: #FFF;
+}
+.bottom-team-head-control .tittles::before {
+    content: 'w';
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    top: 10px;
+    line-height: 0;
+    left: -6px;
+    color: rgba(170, 170, 170, 0.308)
+}
+.bottom-team-head-control .tittles::after {
+    content: '';
+}
+.bottom-team-head-control p {
+    color: #FFF;
+    font-family: sans-serif
+}
+.bottom-team-head-control ul {
+    list-style: none;
+    margin: 0;
+    padding:0;
+    font-family: sans-serif;
+    color: #FFF;
+    text-transform: capitalize 
+}
+/* finish services section */
+/* starting pricing section */
+#pricing {
+    background-color: #F7F7F7
+}
+#pricing .tittles::after {
+    content: 'we provide the best quilty'
+}
+#pricing .card {
+    border: none;
+    box-shadow: 0 0 40px rgba(0,0,0,.05);
+    text-transform: capitalize;
+    font-family: sans-serif
+}
+#pricing .card span {
+    font-size: .8rem;
+    color: #1f1f1f;
+    display: block;
+    margin-bottom: 1rem;
+}
+#pricing .card .price {
+    font-size: 3rem;
+    font-weight: 500;
+}
+#pricing .card .price::before {
+    content: '$';
+    display: block;
+    font-size: 1rem;
+    line-height: 0;
+}
+#pricing .card ul {
+    list-style: none;
+}
+#pricing .card ul li {
+    margin: 1rem 0;
+    color: #787878
+}
+#pricing .card .card-head {
+    display: flex;
+    justify-content: space-between
+}
+#pricing .card .card-head .badge {
+    background-color: #00C3DA;
+    padding: 5px 10px
+} 
+#pricing .card.active {
+    transform: scale(1.1)
+}
+#carouselId2 {
+    margin-top: 3rem;
+}
+
+#carouselId2 .card {
+    border-radius: 10px;
+    width: 75%
+}
+#carouselId2 .card-img-top {
+    width: 15%;
+    transform: translateY(-40%)
+}
+#carouselId2 .card .card-body {
+    padding-top: 0;
+}
+#carouselId2 .card .card-body h2 {
+    font-weight: 700;
+    text-transform: capitalize
+}
+#carouselId2 .card .card-body span {
+    text-transform: uppercase;
+    font-family: serif;
+    color: #787878
+}
+#carouselId2 .carousel-control-prev i,
+#carouselId2 .carousel-control-next i {
+    font-size: 1.5rem;
+    color: #787878
+}
+#carouselId2 .carousel-control-prev i:hover{
+    color: #00C3DA;
+    transform: translateX(-5px)
+}
+#carouselId2 .carousel-control-next i:hover{
+    color: #00C3DA;
+    transform: translateX(5px)
+}
+#carouselId2 .carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #626262
+}
+#carouselId2 .carousel-indicators .active {
+    background-color: #00C3DA
+}
+/* finish pricing section */
+/* starting contact section */
+#googleMap {
+    width: 100%;
+    height: 100%;
+}
+.contact-us .tittles::before{
+    content: "G";
+    left: -10px;
+}
+.contact-us .tittles::after{
+    content: "let's work together"
+}
+.form-group {
+    font-family: sans-serif;
+    color: #626262;
+    text-transform: capitalize;
+}
+
+.form-group .btn.btn-primary {
+    font-weight: 600
+} 
+.form-group .form-control {
+    margin-bottom: 1rem;
+}
+.form-group label {
+    cursor: text;
+}
+#map {
+    height: 100%; 
+    width: 100%;  
+}
+/* finish contact section */
+/* starting media qury */
+@media (min-width: 0px) and (max-width: 991px) {
+    html {
+        font-size: 12px;
+        
+    }
+    .border-control,
+    .nav-bar-socail {
+        display: none
+    }
+    .navbar-light .container {
+        margin: 0 10px
+    }
+    #slidshow .carousel-control-prev:hover i::after,
+    #slidshow .carousel-control-next:hover i::after{
+        transform: scale(1)
+    } 
+    
+    .btn {
+        font-size: 1.5rem
+    }
+    #slidshow .carousel-item .slidshow-content p {
+        font-size: 2rem
+    }
+    #slidshow {
+        text-align: center
+    }
+    #about span {
+        font-size: 2rem
+    }
+    #about p {
+        font-size: 3rem
+    }
+    .tittles {
+        font-size: 4rem
+    } 
+    .tittles::after {
+        font-size: 2rem
+    }
+    .image-caption {
+        font-size: 2rem
+    }
+    .image-caption .headings h4 {
+        font-size: 2rem
+    }
+    .image-caption .headings span {
+        font-size :1.2rem
+    }
+    .card-container {
+        margin-bottom: 2rem;
+    }
+    .top-team-head-control p {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem
+    }
+    .bottom-team-head-control .first-section {
+        text-align: center;
+    }
+    .bottom-team-head-control .tittles::before {
+        left: calc(50% - 30px);
+        font-size: 6rem
+    }
+    .bottom-team-head-control p {
+        font-size: 2rem
+    }
+    .bottom-team-head-control ul li {
+        font-size: 2rem
+    }
+    #pricing .card {
+        margin-bottom: 2rem;
+    }
+    #pricing .card span {
+        font-size: 2rem;
+        margin-left: 1.5rem;
+    }
+    #pricing .card .price {
+        font-size: 10rem;
+        margin-left: 1.5rem;
+    }
+    #pricing .card .price::before {
+        font-size: 2.5rem;
+    }
+    #pricing .card ul li {
+        margin-left: 1.5rem;
+        font-size: 2rem
+    }
+    #pricing .card .btn.btn-primary{
+        margin-left: 1.5rem;
+    }
+    #pricing .card.active {
+        transform: scale(1)
+    }
+    #carouselId2 .carousel-control-prev , #carouselId2 .carousel-control-next  {
+        display: none;
+    }
+    #carouselId2 .card {
+        width: 95%;
+        transform: translateY(10%)
+    }
+    #carouselId2 {
+        padding-top: 3rem;
+        margin-bottom: 6rem;
+    }
+    #carouselId2 .card-img-top {
+        width: 25%;
+        transform: translateY(-30%)
+    }
+    .carousel-indicators {
+        transform: translateY(180%)
+    }
+    .form-control {
+        height: 4rem;
+        border-width: 3px;
+        border-color: #EEE
+    }
+    .form-group label {
+        font-size: 1.5rem
+    }
+    
+}
+@media (min-width:0px) and (max-width: 764px) {
+    html {
+        font-size: 10px
+    }
+    #slidshow .carousel-control-next,
+    #slidshow .carousel-control-prev{
+        display: none
+    }
+    
+}
+@keyframes button-hover-animation {
+    0% {
+        background-size: 100%;
+        background-position-x: 100px;
+    }
+    0% {
+        background-size: 100%;
+        background-position-x: -600px;
+    }
+}
+@keyframes slider-button-hover-animation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@keyframes slider-animation {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
